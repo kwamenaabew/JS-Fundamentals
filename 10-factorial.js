@@ -1,0 +1,12 @@
+function factorial(n) {
+  if (isNaN(n) || n < 0) {
+    return 1; // graceful fallback for invalid input
+  }
+  if (n <= 1) {
+    return 1;
+  }
+  return n * factorial(n - 1);
+}
+
+const input = Number(process.argv[2]);
+console.log(factorial(input));
